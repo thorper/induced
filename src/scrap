@@ -1,0 +1,30 @@
+
+// const double PI = 3.1415926535;
+// Quaterniond q;
+// q.x() = 0;
+// q.y() = 1;
+// q.z() = 0;
+// q.w() = PI/8;
+
+// R01 << 1, 1, 1,
+//        0, 0, 0,
+//        1, 3, 5;
+
+// double a11 = (q0*q0) + (q1*q1) - (q2*q2) - (q3*q3);
+// double a12 = 2*q1*q2 - 2*q0*q3;
+// double a13 = 2*q1*q3 + 2*q0*q2;
+// double a21 = 2*q1*q2 + 2*q0*q3;
+// double a22 = (q0*q0) - (q1*q1) + (q2*q2) - (q3*q3);
+// double 
+  // Eigen::Quaterniond q(2, 0, 1, -3); 
+
+  // std::cout << "This quaternion consists of a scalar " << q.w() << " and a vector " << std::endl << q.vec() << std::endl;
+
+
+double q0 = gpl->pose.pose.orientation.w;
+double q1 = gpl->pose.pose.orientation.x;
+double q2 = gpl->pose.pose.orientation.y;
+double q3 = gpl->pose.pose.orientation.z;
+
+Quaterniond Q01(q0,q1,q2,q3);
+

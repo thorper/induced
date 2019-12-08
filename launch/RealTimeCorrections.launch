@@ -1,0 +1,12 @@
+<launch>
+
+<node pkg="wind" type="wind_trig_node" name="wind_trig_node"/>
+	<param name="sample_rate" type="int" value="30" />
+	<param name="device_address" type="str" value="/dev/ttyUSB1"/>
+<include file="$(find mavros)/launch/px4.launch">
+	<arg name="fcu_url" value="/dev/ttyUSB0:921600"/>
+</include>
+<node pkg="induced" type="induced_node" name="induced_node" output="screen"/>
+
+
+</launch>
